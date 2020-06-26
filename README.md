@@ -1,5 +1,32 @@
 # Alquiler de bicicletas
 
+## Posible solución
+
+### Problemas de diseño
+
+1. Clase anémica (sin comportamiento).
+2. Viola "tell dont ask"
+3. Principios comprometidos:
+   - SRP
+   - OCP
+4. Ocultamiento/Encapsulamiento
+
+#### Diagrama de clases
+
+![dc](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/fiuba/algo3_simulacro_tn_alquiler_bici/solucion/202001C/media/diagrams/diagrama_clases.plantuml)
+
+#### Diagrama de secuencia para varios alquileres
+
+![dc](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/fiuba/algo3_simulacro_tn_alquiler_bici/solucion/202001C/media/diagrams/dc_alquiler_varios.plantuml)
+
+#### Diagrama de secuencia para alquiler por un día
+
+![dc](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/fiuba/algo3_simulacro_tn_alquiler_bici/solucion/202001C/media/diagrams/ds_alquiler_diario.plantuml)
+
+#### Diagrama de secuencia para alquiler por varios días
+
+![dc](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/fiuba/algo3_simulacro_tn_alquiler_bici/solucion/202001C/media/diagrams/ds_alquiler_por_dias.plantuml)
+
 ## Objetivos
 
 *   Practicar un ejercicio de modelado de dificultad similar a la del examen parcial de la semana que viene.
@@ -21,15 +48,5 @@
 *   Los diagramas no deben estar 100% completos pero sí deben incluir los detalles suficientes como para que se logre comunicar efectivamente la responsabilidad de cada clase y es importante que no haya inconsistencia entre los diagramas y el código.
 *   Si se traban con algún problema de sintaxis pueden saltearlo y dejar un comentario que empiece con "FIXME" y continuar con el modelo e intentar arreglarlo al final. Es más importante que el modelo esté completo que el perfecto uso de la sintaxis del lenguaje.
 
-
-
-## Problemas de diseño
-
-1. Clase anémica (sin comportamiento).
-2. Viola "tell dont ask"
-3. Principios comprometidos:
-   - SRP
-   - OCP
-4. Ocultamiento/Encapsulamiento
 
 
