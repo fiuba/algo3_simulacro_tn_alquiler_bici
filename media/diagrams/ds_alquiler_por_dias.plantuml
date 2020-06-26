@@ -9,11 +9,11 @@ TestCase -> Client: agregar(AlquilerPorDiasDiario)
 TestCase -> Client: saldoAdeudado()
 return precioPorDia * dias
 
-Client -> AlquilerPeriodo: deudaPor(numeroDias)
+Client -> AlquilerPeriodo: deuda()
 return precioPorDia * dias
 
 
-AlquilerPeriodo -> Bicicleta: deudaPor(dias)
+AlquilerPeriodo -> Bicicleta: deuda()
 return precioPorDia * dias
 
 
