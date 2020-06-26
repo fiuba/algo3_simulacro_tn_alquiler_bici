@@ -2,18 +2,19 @@
 
 TestCase -> Bicicleta ** : con(precioPorDia, precioDiario Double)
 return unaBici
-TestCase -> AlquilerPorDia ** : rentar(unaBici)
+TestCase -> AlquilerPeriodo ** : rentar(unaBici)
 
 TestCase -> Client: agregar(AlquilerPorDiasDiario)
 
 TestCase -> Client: saldoAdeudado()
-return cantidadDias * dias
+return precioPorDia * dias
 
-Client -> AlquilerPorDia: deuda()
-return cantidadDias * dias
+Client -> AlquilerPeriodo: deudaPor(numeroDias)
+return precioPorDia * dias
 
-AlquilerDiario -> Bicicleta: deudaPor(dias)
-return cantidadDias * dias
+
+AlquilerPeriodo -> Bicicleta: deudaPor(dias)
+return precioPorDia * dias
 
 
 
