@@ -21,15 +21,3 @@
 *   Los diagramas no deben estar 100% completos pero sí deben incluir los detalles suficientes como para que se logre comunicar efectivamente la responsabilidad de cada clase y es importante que no haya inconsistencia entre los diagramas y el código.
 *   Si se traban con algún problema de sintaxis pueden saltearlo y dejar un comentario que empiece con "FIXME" y continuar con el modelo e intentar arreglarlo al final. Es más importante que el modelo esté completo que el perfecto uso de la sintaxis del lenguaje.
 
-
-
-## Problemas de diseño
-
-1. Clase anémica (sin comportamiento).
-2. Viola "tell dont ask"
-3. Principios comprometidos:
-   - SRP
-   - OCP
-4. Ocultamiento/Encapsulamiento
-
-
