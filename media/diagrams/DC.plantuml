@@ -1,0 +1,34 @@
+@startuml
+
+class Client {
+        agregarAlquiler(a Alquiler)
+        saldoAdeudado() Double
+}
+
+interface Alquiler {
+        rentar(b Bicicleta)
+        deuda() Double
+}
+
+class AlquilerDiario {
+        deuda() Double
+}
+
+class AlquilerPeriodo {
+        deuda() Double
+}
+
+class Bicicleta {
+        dudaDiaria() Double
+        deudaPeriodo() Double
+}
+
+
+Client *- "*" Alquiler
+
+Alquiler o- Bicicleta
+
+Alquiler <|-- AlquilerDiario
+Alquiler <|-- AlquilerPeriodo
+
+@enduml 
