@@ -23,14 +23,16 @@
 
 ## Posible solución
 
-### Problemas de diseño
-
-1. Clase anémica (sin comportamiento).
-2. Viola "tell dont ask"
-3. Principios comprometidos:
-   - SRP
-   - OCP
-4. Ocultamiento/Encapsulamiento
+## Problemas de diseño
+1. Los nombres de las pruebas no revelan intencion
+10. Faltan inicializadores.
+20. Clase anémica (sin comportamiento): `Alquiler` y `Bici`.
+30. Viola "tell dont ask": `Alquiler>>esDiario:` viola Tell don't ask.
+40. `Cliente` multiples responsabilidades.
+50. Ocultamiento/Encapsulamiento: `Alquiter>>obtenerPrecio,obtenerPeriodo:`.
+60. Principios comprometidos:
+   - [SRP](https://en.wikipedia.org/wiki/Single-responsibility_principle) (En el caso de `Cliente`)
+   - [OCP](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) (En el caso de `Cliente` y el mensaje `esDiario`)
 
 #### Diagrama de clases
 
