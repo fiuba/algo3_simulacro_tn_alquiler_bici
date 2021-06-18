@@ -23,6 +23,9 @@ class Bicicleta {
         - precioPorUnDia Double
         - precioPorDia Double
 
+        establecerPrecioPorDia(Double)
+        establecerPrecio()
+        
         dudaDiaria() Double
         deudaPeriodo() Double
 }
@@ -35,4 +38,5 @@ Alquiler o- Bicicleta
 Alquiler <|.. AlquilerDiario
 Alquiler <|.. AlquilerPeriodo
 
+AlquilerDiario *- "1" AlquilerPeriodo
 @enduml 

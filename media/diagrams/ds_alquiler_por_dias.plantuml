@@ -1,6 +1,6 @@
 @startuml
 
-TestCase -> Bicicleta ** : con(precioPorDia, precioDiario Double)
+TestCase -> Bicicleta ** : establecerPrecio(precioPorPeriodo Double)
 return unaBici
 TestCase -> AlquilerPeriodo ** : rentar(unaBici)
 
