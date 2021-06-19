@@ -1,6 +1,6 @@
 @startuml
 
-title: Un cliente alquila una bicicleta durante 5 unidades de tiempo y el precio por unidad de tiempo es 3 $/u (la unidad de tiempo puede ser días)
+title: Un cliente alquila una bicicleta durante 5 unidades de tiempo.  \nEl precio por unidad de tiempo es 3 $/u \n (la unidad de tiempo puede ser días).
 
 TestCase -> Bici ** : establecerPrecio(precioPorPeriodo Double)
 return unaBici
