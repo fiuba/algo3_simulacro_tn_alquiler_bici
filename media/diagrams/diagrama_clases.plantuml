@@ -10,30 +10,32 @@ interface Alquiler {
 }
 
 class AlquilerDiario {
-        rentar(bien Bicicleta) AlquilerDiario
+        rentar(bien Bici) AlquilerDiario
         deuda() Double
 }
 
 class AlquilerPeriodo {
-        rentarPor(bien Bicicleta, numeroDias Integer) AlquilerPeriodo
+        rentarPor(bien Bici, numeroDias Integer) AlquilerPeriodo
         deuda() Double
 }
 
-class Bicicleta {
+class Bici {
         - precioPorUnDia Double
         - precioPorDia Double
 
-        establecerPrecioPorDia(Double)
-        establecerPrecio()
+        - establecerPrecioPorDia(Double)
+        - establecerPrecio(Double)
+
+        + porDia() Bici
         
-        dudaDiaria() Double
-        deudaPeriodo() Double
+        + dudaDiaria() Double
+        + deudaPeriodo(unidades Double) Double
 }
 
 
 Client *- "*" Alquiler
 
-Alquiler o- Bicicleta
+Alquiler o- Bici
 
 Alquiler <|.. AlquilerDiario
 Alquiler <|.. AlquilerPeriodo
