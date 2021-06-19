@@ -1,20 +1,22 @@
 @startuml
 
-TestCase -> Bicicleta ** : establecerPrecio(precioPorPeriodo Double)
+title: Un cliente alquila una bicicleta durante 5 unidades de tiempo y el precio por unidad de tiempo es 3 $/u (la unidad de tiempo puede ser días)
+
+TestCase -> Bici ** : establecerPrecio(precioPorPeriodo Double)
 return unaBici
-TestCase -> AlquilerPeriodo ** : rentar(unaBici)
+TestCase -> AlquilerPeriodo ** : rentarPor(unaBici, 5)
 
 TestCase -> Client: agregar(AlquilerPorDiasDiario)
 
 TestCase -> Client: saldoAdeudado()
-return precioPorDia * dias
 
 Client -> AlquilerPeriodo: deuda()
-return precioPorDia * dias
 
+AlquilerPeriodo -> Bici: deudaPorPeriodo(5)
+return precioPorPeriodo * 5
 
-AlquilerPeriodo -> Bicicleta: deuda()
-return precioPorDia * dias
+AlquilerPeriodo --> Client: precioPorPeriodo * 5
+Client --> TestCase: precioPorPeriodo * 5
 
 
 

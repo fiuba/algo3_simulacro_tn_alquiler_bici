@@ -1,5 +1,7 @@
 @startuml
 
+title: Un cliente alquila una bicicleta durante un día
+
 TestCase -> Bicicleta ** : establecerPrecioPorDia(precioPorDia Double)
 return unaBici
 TestCase -> AlquilerDiario ** : rentar(unaBici)
@@ -14,7 +16,9 @@ return unaBiciPorDia
 
 AlquilerDiario -> AlquilerPeriodo ** : rentarPor(unaBiciPorDia, 1)
 
-AlquilerPeriodo -> Bicicleta: deuda()
-return precioPorDia * 1
+AlquilerPeriodo -> AlquilerPeriodo: deuda()
+AlquilerPeriodo --> AlquilerDiario: precioPorDia * 1
+AlquilerDiario --> Client: precioPorDia * 1
+Client --> TestCase: precioPorDia * 1
 
 @enduml 
