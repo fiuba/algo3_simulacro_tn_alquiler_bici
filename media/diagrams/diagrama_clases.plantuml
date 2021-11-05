@@ -1,5 +1,19 @@
 @startuml
 
+note left of Client::saldoAdeudado
+saldoAPagar
+
+	| resultado |
+	
+	resultado := 0.
+	
+	alquileres do: [ :a | 
+			resultado := resultado + a deuda. 
+	].
+		
+^ resultado
+end note
+
 class Client {
         agregarAlquiler(a Alquiler)
         saldoAdeudado() Double
@@ -9,11 +23,23 @@ interface Alquiler {
         deuda() Double
 }
 
+note left of AlquilerDiario::deuda
+deuda
+	| alquiler nuevaBici nuevoBien |
+	nuevaBici := unBien porDia.
+	alquiler := AlquilerPeriodo renta: nuevaBici  por: 1. 
+	^alquiler deuda.
+end note
+
 class AlquilerDiario {
         rentar(bien Bici) AlquilerDiario
         deuda() Double
 }
 
+note right of AlquilerPeriodo::deuda
+deuda
+^unBien deudaPorPeriodo: numeroDias
+end note
 class AlquilerPeriodo {
         rentarPor(bien Bici, numeroDias Integer) AlquilerPeriodo
         deuda() Double
